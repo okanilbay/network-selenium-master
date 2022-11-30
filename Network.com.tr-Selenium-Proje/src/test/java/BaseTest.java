@@ -20,9 +20,9 @@ public class BaseTest {
         driver.manage().window().maximize();
     }
 
- //   @AfterAll
- //   public void tearDown(){
- //       driver.quit();
- //   }
+    @AfterAll
+    public void tearDown(){
+        driver.quit();
+    }
 
 }
