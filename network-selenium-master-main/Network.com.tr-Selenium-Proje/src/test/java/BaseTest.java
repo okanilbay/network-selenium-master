@@ -18,10 +18,11 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.get("https://www.network.com.tr/");
         driver.manage().window().maximize();
+
     }
 
     @AfterAll
-    public void tearDown(){
+   public void tearDown(){
         driver.quit();
     }
 

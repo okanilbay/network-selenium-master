@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/network-selenium-master-main.iml" filepath="$PROJECT_DIR$/.idea/network-selenium-master-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Network.com.tr-Selenium-Proje/network-selenium-yt.iml" filepath="$PROJECT_DIR$/Network.com.tr-Selenium-Proje/network-selenium-yt.iml" />
+    </modules>
+  </component>
+</project>

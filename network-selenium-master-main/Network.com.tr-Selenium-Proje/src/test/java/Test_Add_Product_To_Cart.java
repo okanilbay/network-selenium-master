@@ -1,10 +1,10 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import pages.CartPage;
-import pages.HomePage;
-import pages.ProductDetailPage;
-import pages.ProductsPage;
+import org.openqa.selenium.By;
+import pages.*;
+
+import java.util.concurrent.TimeUnit;
 
 public class Test_Add_Product_To_Cart extends BaseTest {
 
@@ -12,6 +12,7 @@ public class Test_Add_Product_To_Cart extends BaseTest {
     ProductsPage productsPage ;
     ProductDetailPage productDetailPage ;
     CartPage cartPage ;
+
 
     @Test
     @Order(1)
@@ -38,7 +39,9 @@ public class Test_Add_Product_To_Cart extends BaseTest {
     @Test
     @Order(3)
     public void add_product_to_cart(){
+
         productDetailPage.selectSize(3);
+
         productDetailPage.addToCart();
 
     }
@@ -47,12 +50,27 @@ public class Test_Add_Product_To_Cart extends BaseTest {
     @Order(4)
     public void go_to_cart(){
         cartPage = new CartPage(driver);
+
         homePage.goToCart();
+
+        homePage.goOn();
+
+        homePage.searchBox().login("okan.ilbay@hotmail.com");
+
+        homePage.searchBox().login("seleniumtest");
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
     //    Assertions.assertTrue(cartPage.checkIfProductAdded() ,
       //          "Product was not added to cart!");
     }
-
-
+    @Test
+    @Order(5)
+    public void go_to_home_page(){
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        homePage.go_to_home();
+        homePage.clickBasketLogo();
+        homePage.product_delete();
+    }
 
 
 }
